@@ -1,0 +1,6 @@
+for file in *.c 
+do
+        gcc -g -Wall -o `basename $file .c` $file
+done
+
+
