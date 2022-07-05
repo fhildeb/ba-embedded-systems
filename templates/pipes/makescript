@@ -1,0 +1,5 @@
+#!/bin/bash
+for i in *.c
+do
+	gcc -g -Wall -o `basename $i .c` $i
+done
