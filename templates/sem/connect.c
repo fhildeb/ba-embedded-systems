@@ -21,7 +21,7 @@ sem_t *semInit(const char *name, int value)
 int main(int argc, char *argv[])
 {
     sem_t* semid;
-    if((semid = semInit("/Boris", 1)) == NULL) {
+    if((semid = semInit("/Connection open", 1)) == NULL) {
       perror("sem_open");
       return EXIT_FAILURE;
     }

@@ -1,4 +1,4 @@
-boris: boris.c
-	gcc -Wall -g -o boris boris.c
+connect: connect.c
+	gcc -Wall -g -o connect connect.c
 clean:
-	rm -f *.o boris core *~
+	rm -f *.o connect core *~
