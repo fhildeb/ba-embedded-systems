@@ -43,7 +43,7 @@ int main(int argc, char** argv)
     if(childProcessId > 0) /*Ist Elternprozess*/
     {
         int status;
-        /*wait blockiert Process bis Kind fertig ist*/
+        /* wait blockiert Process bis Kind fertig ist*/
         waitProcessId = wait(&status);
         printf("Kind %d hat mit %d beendet.\n", waitProcessId, status);
     }
