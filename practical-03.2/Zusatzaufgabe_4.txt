@@ -1,0 +1,8 @@
+@author: fhildeb1
+Zusatzfrage: Muss der Prototyp der Funktion Pi() 
+in flaeche.h aufgenommen werden?
+
+Antwort: Nein, muss er nicht zwingend. Nur,
+wenn die Funktion in kreis.c genutzt wird.
+Der Prototyp macht diese Funktion bekannt und
+defniiert, wie die Funktion aufgerufen werden muss.

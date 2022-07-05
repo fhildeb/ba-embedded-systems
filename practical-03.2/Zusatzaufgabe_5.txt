@@ -1,0 +1,13 @@
+@author: fhildeb1
+Zusatzaufgabe: Erstellen Die Pi() so, dass diese
+Funtkion außerhalb von flaeche.c nicht sichtbar und
+nutzbar ist.
+
+Möglichkeit 1: Den Prototyp von Pi() in flaeche.h
+auskommentieren. Somit ist Funktion nicht mehr 
+sichtbar für kreis.c.
+
+Möglichkeit 2: Die Funktion Pi() in flaeche.c abändern
+von "double Pi(){...}" zu "static double Pi(){...}".
+Wenn eine Methode statisch ist, kann sie nur innerhalb
+einer Datei genutzt werden.
