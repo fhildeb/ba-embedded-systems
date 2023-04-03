@@ -6,7 +6,7 @@
 #include <fcntl.h>      
 #include <signal.h>
 #include <unistd.h>
-#include "shmbsp.h"
+#include "shm.h"
 
 
 int main (int argc, char **argv)

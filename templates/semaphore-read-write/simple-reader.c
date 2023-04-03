@@ -7,7 +7,7 @@
 #include <sys/sem.h>
 #include <sys/shm.h>
 #include <signal.h>
-#include "simplesema.h"
+#include "simple-semaphore.h"
 #define SHMSZ 256
 
 int shmid, semid;

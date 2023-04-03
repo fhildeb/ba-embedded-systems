@@ -5,7 +5,7 @@
 #include <sys/sem.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "simplesema.h"
+#include "simple-semaphore.h"
 
 /* Kopie aus Manual semctl(2) */ 
 #if defined(__GNU_LIBRARY__) && !defined(_SEM_SEMUN_UNDEFINED)

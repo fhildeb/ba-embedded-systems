@@ -6,7 +6,7 @@
 #include <sys/ipc.h>
 #include <sys/sem.h>
 #include <sys/shm.h>
-#include "readerwriter.h"
+#include "advanced-lock.h"
 #define SHMSZ 256
 
 int main (int argc, char **argv)

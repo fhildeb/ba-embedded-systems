@@ -6,7 +6,7 @@
 #include <sys/ipc.h>
 #include <sys/sem.h>
 #include <sys/shm.h>
-#include "simplesema.h"
+#include "simple-semaphore.h"
 #define SHMSZ 256
 
 int main (int argc, char **argv)
