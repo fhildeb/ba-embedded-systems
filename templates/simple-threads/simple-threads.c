@@ -15,7 +15,6 @@ void *boris(void *param)
 	return NULL;
 }
 
-
 int main(void)
 {
 	int retval;

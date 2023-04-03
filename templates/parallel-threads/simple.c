@@ -1,17 +1,4 @@
 /*  Beispiel aus Wagner / Towsley: "Getting Started With POSIX Threads"
-     
-      3 Threads laufen unsynchronisiert parallel ab. 
-      Thread 0:  Haupt-Thread, erzeugt zwei Threads, beendet Prozess 
-                 und damit die beiden anderen Threads  
-      Thread 1:  gibt "Hello" aus  
-      Thread 2:  gibt "World" aus
-      Die Reihenfolge der Abarbeitung der Threads ist nicht vorhersagbar. 
-      Moegliche Ausgaben:
-    	Hello World
-    	World Hello
-    	Hello
-    	World
-    	keine Ausgabe	
 */
 #include <pthread.h>
 #include <stdio.h>
