@@ -4,8 +4,12 @@ Functions provided and developed within the course to learn and experiment on.
 
 ## Features
 
-- `semaphore-multiple`: Using Multiple Semaphores for Shared Access
-- `semaphore-single`: Using One Semaphore for Shared Access
+- `pipe-reader-timeout`: Multi-FIFO Reader with Timeout
+- `semaphore-read-write`: Read Write Locking
+  - Full Memory Lockup
+  - Gradiant Locking
+- `semaphore-multiple`: Multi-Semaphore Solution for Shared Access
+- `semaphore-single`: Single Semaphore Solution for Shared Access
 - `semaphore-sync`: Semaphore-based Process Synchronization
 - `shared-memory`: Inter-Process Communication on Shared Memory
 - `signal-handling`: Signal Handling Functionalities
