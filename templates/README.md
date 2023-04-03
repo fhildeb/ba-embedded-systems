@@ -4,6 +4,7 @@ Functions provided and developed within the course to learn and experiment on.
 
 ## Features
 
+- `semaphore-sync`: Semaphore-based Process Synchronization
 - `shared-memory`: Inter-Process Communication on Shared Memory
 - `signal-handling`: Signal Handling Functionalities
   - Delaying, Ignoring, and Blocking
