@@ -4,5 +4,6 @@ Functions provided and developed within the course to learn and experiment on.
 
 ## Features
 
-- Parallel Execution of Threads
-- Thread Synchronization with Mutex and Cleanups
+- `parallel-threads`: Parallel Execution of Threads
+- `thread-data-keys`: Thread-Specific Data with Keys
+- `thread-sync-mutex`: Thread Synchronization with Mutex and Cleanups
