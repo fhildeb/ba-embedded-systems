@@ -4,6 +4,8 @@ Functions provided and developed within the course to learn and experiment on.
 
 ## Features
 
+- `semaphore-multiple`: Using Multiple Semaphores for Shared Access
+- `semaphore-single`: Using One Semaphore for Shared Access
 - `semaphore-sync`: Semaphore-based Process Synchronization
 - `shared-memory`: Inter-Process Communication on Shared Memory
 - `signal-handling`: Signal Handling Functionalities

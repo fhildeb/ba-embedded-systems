@@ -1,0 +1,3 @@
+# Inter-Process Communication with Shared Memory using a Semaphore
+
+This program demonstrates the use of shared memory and semaphores to allow inter-process communication between a server and a client. The server creates a shared memory segment and initializes a single semaphore to control access to it. It then writes a string to the shared memory, which the client reads and prints to the console. The semaphore ensures exclusive access to the shared memory, preventing data corruption or race conditions. The program also includes signal handlers to ensure that the shared memory segment and semaphore are properly cleaned up when the program is terminated.
