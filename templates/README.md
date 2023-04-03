@@ -4,6 +4,7 @@ Functions provided and developed within the course to learn and experiment on.
 
 ## Features
 
+- `shared-memory`: Inter-Process Communication on Shared Memory
 - `signal-handling`: Signal Handling Functionalities
   - Delaying, Ignoring, and Blocking
   - Masking, Jumping, and Catching
