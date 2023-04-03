@@ -1,6 +1,3 @@
-/* Beispiel 3: Installation eines SIGINT - Handlers 
- *  zeigt u.a., dass blockierte Signale keine Warteschlangen  haben
-*/
 #include <signal.h>
 #include <stdio.h>
 #include <stdlib.h> 

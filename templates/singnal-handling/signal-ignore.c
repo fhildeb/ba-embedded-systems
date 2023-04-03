@@ -1,4 +1,3 @@
-/* Beispiel 1: Ignorieren von SIGINT  */
 #include <signal.h>
 #include <stdio.h> 
 #include <stdlib.h>

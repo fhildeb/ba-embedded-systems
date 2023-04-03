@@ -1,6 +1,3 @@
-/* Demonstriert das Erzeugen eines Kindprozesses und die Auswertung 
- * des SIGCLD-Signals bei dessen Ende
- */
 #define _XOPEN_SOURCE
 #include    <sys/types.h>
 #include    <sys/wait.h>

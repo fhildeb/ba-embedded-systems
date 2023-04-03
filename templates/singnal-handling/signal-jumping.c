@@ -1,4 +1,3 @@
-/* Beispiel 8:                                                      */
 /* Quelle: Stevens: Advanced programming in the UNIX Environment    */
 
 #include  <signal.h>

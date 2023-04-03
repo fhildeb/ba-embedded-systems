@@ -1,6 +1,3 @@
-/* Beispiel 7: Demonstriert das Setzen einer Signalmaske und die Abfrage
- * evtl. anhängiger Signale
- */
 #include <errno.h>   
 #include <signal.h>
 #include <stdio.h>
@@ -16,7 +13,7 @@ int main(void)
      sigset_t  newmask, oldmask, pendmask;
      int rest;
      
-     /* installiere Handler für SIGINT-Signal */
+     /* installiere Handler fï¿½r SIGINT-Signal */
      act.sa_handler=sig_int;
      /* leere Signalmaske: andere Signale werden akzeptiert */
      sigemptyset(&act.sa_mask);

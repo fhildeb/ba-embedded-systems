@@ -1,7 +1,3 @@
-/* Beispiel 5: Timeout - Behandlung
-   Handler springt nach Signalbehandlung an mit setjmp() registrierte
-   Stelle zurück
-*/
 #include <setjmp.h>
 #include <signal.h>
 #include <stdio.h>

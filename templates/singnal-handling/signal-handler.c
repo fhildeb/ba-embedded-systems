@@ -1,6 +1,3 @@
-/* Beispiel 2: Installation eines SIGINT - Handlers  
-   Handler fängt ersten SIGINT ab, danach Rückstellen auf Standardreaktion
-*/
 #include <stdio.h> 
 #include <signal.h>
 #include <stdlib.h>
