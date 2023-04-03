@@ -1,9 +1,9 @@
 #include <sys/types.h>
 #include <sys/wait.h>
-/* Beispiel 3: 	Lesen und Schreiben aus einer Pipe,
-		echte Kommunikation zwischen zwei Prozessen
-		Kindprozess�
-		Daten werden von p3read aus stdin gelesen
+/* 	Lesen und Schreiben aus einer Pipe,
+	echte Kommunikation zwischen zwei Prozessen
+	Kindprozess
+	Daten werden von pipe-sub-input aus stdin gelesen
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -25,13 +25,3 @@ int main(void)
 	}
 	return EXIT_SUCCESS;
 }
-
-
-
-
-
-		
-		
-
-
-

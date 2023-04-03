@@ -2,4 +2,4 @@
 
 BA Embedded Systems Course from the University of Applied Science Mittweida that took place in 2019.
 
-> **_NOTE:_** The commentary and filenames might appear in German.
+> **_NOTE:_** The code commentary and filenames might appear in German.

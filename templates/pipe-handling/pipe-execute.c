@@ -1,13 +1,12 @@
 #include <sys/types.h>
 #include <sys/wait.h>
-/* Beispiel 2: 	Lesen und Schreiben aus einer Pipe,
-		echte Kommunikation zwischen zwei Prozessen 
-		Daten werden für Kindprozess (Programm pread2) in Pipe geschrieben
-		Problem: der Kindprozess erbt die Deskriptoren der Pipe,
-		ausgeführtes Programm pread2 kennt sie aber nicht.
-		Lösung 1: Deskriptornummer wird als Parameter übergeben
+/* 	Lesen und Schreiben aus einer Pipe,
+	echte Kommunikation zwischen zwei Prozessen 
+	Daten werden für Kindprozess (Programm pread2) in Pipe geschrieben
+	Problem: der Kindprozess erbt die Deskriptoren der Pipe,
+	ausgeführtes Programm pread2 kennt sie aber nicht.
+	Lösung 1: Deskriptornummer wird als Parameter übergeben
 */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -44,8 +43,8 @@ int main(void)
 			/* Deskriptornummer der Lesepipe */
 			sprintf(fdstring, "%d", pipefd[0]);
 
-			/* als Parameter an p2read übergeben */
-			execl("./p2read", "p2read", fdstring, NULL);
+			/* als Parameter an pipe-sub-argument übergeben */
+			execl("./pipe-sub-argument", "pipe-sub-argument", fdstring, NULL);
 
 			/* execl kehrt nur bei Fehler zurück */
 			perror("execl");

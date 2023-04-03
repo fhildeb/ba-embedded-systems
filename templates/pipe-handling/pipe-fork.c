@@ -1,10 +1,11 @@
 #include <sys/types.h>
 #include <sys/wait.h>
-/* Beispiel 1: 	Lesen und Schreiben aus einer Pipe durch einen Proze� */
-/* Beachte:							      */
-/* Um einen Kindprozess mit dem Debugger abzuarbeiten, ist ein Trick  */
-/* notwendig (s.u.)						      */
-
+/* 
+	Lesen und Schreiben aus einer Pipe durch einen Prozess
+	Beachte:							     
+	Um einen Kindprozess mit dem Debugger abzuarbeiten, 
+	ist ein Trick notwendig (s.u.)						      
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

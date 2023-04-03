@@ -1,6 +1,6 @@
 #include <sys/types.h>
 #include <sys/wait.h>
-/* Beispiel 1: 	Lesen und Schreiben aus einer Pipe durch einen Prozess */
+/* Lesen und Schreiben aus einer Pipe durch einen Prozess */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

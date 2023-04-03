@@ -19,5 +19,5 @@ fi
 xterm -e 'cat > fifo1' &
 xterm -e 'cat > fifo2' &
 xterm -e 'cat > fifo3' &
-./selectdemo fifo1 fifo2 fifo3
+./pipe-reader fifo1 fifo2 fifo3
 

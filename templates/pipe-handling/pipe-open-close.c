@@ -1,9 +1,6 @@
 #include <sys/types.h>
 #include <sys/wait.h>
-
-
-/* Beispiel 5: Nutzung von popen() und pclose() */
-
+/* Nutzung von popen() und pclose() */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

@@ -1,9 +1,9 @@
 #include <sys/types.h>
 #include <sys/wait.h>
-/* Beispiel 2: 	Lesen und Schreiben aus einer Pipe,
-		echte Kommunikation zwischen zwei Prozessen
-		Kindprozess
-		Daten werden von pread aus pipe gelesen
+/* 	Lesen und Schreiben aus einer Pipe,
+	echte Kommunikation zwischen zwei Prozessen
+	Kindprozess
+	Daten werden von pread aus pipe gelesen
 */
 #include <stdio.h>
 #include <stdlib.h>

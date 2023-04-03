@@ -4,6 +4,10 @@ Functions provided and developed within the course to learn and experiment on.
 
 ## Features
 
+- `pipe-handling`: Pipe Handling Functionalities
+  - Forking, Duplication and Execution
+  - Opening and Closing
+  - Input and Argument Passing
 - `pipe-reader-timeout`: Multi-FIFO Reader with Timeout
 - `semaphore-read-write`: Read Write Locking
   - Full Memory Lockup

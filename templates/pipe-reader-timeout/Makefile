@@ -1,5 +1,5 @@
-selectdemo: selectdemo.c
-	gcc -Wall -g -o selectdemo selectdemo.c
+pipe-reader: pipe-reader.c
+	gcc -Wall -g -o pipe-reader pipe-reader.c
 
 clean:
-	rm *.o selectdemo fifo1 fifo2 fifo3
+	rm *.o pipe-reader fifo1 fifo2 fifo3

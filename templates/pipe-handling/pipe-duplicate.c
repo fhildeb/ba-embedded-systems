@@ -1,12 +1,12 @@
 #include <sys/types.h>
 #include <sys/wait.h>
-/* Beispiel 3: 	Lesen und Schreiben aus einer Pipe,
-		echte Kommunikation zwischen zwei Prozessen
-		Daten werden für Kindprozess (Programm pread2) in Pipe geschrieben
-		Problem: der Kindprozess erbt die Deskriptoren der Pipe,
-		ausgeführtes Programm pread3 kennt sie aber nicht.
-		Lösung 2: Kindprozess leitet Lesepipe vor exec() nach STDIN_FILENO um. 
-		p3read liest aus Standardeingabe
+/* 	Lesen und Schreiben aus einer Pipe,
+	echte Kommunikation zwischen zwei Prozessen
+	Daten werden für Kindprozess (Programm pread2) in Pipe geschrieben
+	Problem: der Kindprozess erbt die Deskriptoren der Pipe,
+	ausgeführtes Programm pread3 kennt sie aber nicht.
+	Lösung 2: Kindprozess leitet Lesepipe vor exec() nach STDIN_FILENO um. 
+	pipe-sub-input liest aus Standardeingabe
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -51,7 +51,7 @@ int main(void)
 	   		        return EXIT_FAILURE;
 	   		}
 
-			execl("./p3read", "p3read", NULL);
+			execl("./pipe-sub-input", "pipe-sub-input", NULL);
 
 			/* Fehler execl()) */
 			perror("execl");
