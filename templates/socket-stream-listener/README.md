@@ -1,0 +1,3 @@
+# Socket-based Trigonometric Calculator
+
+This project consists of a client-server application for a socket-based trigonometric calculator. The client sends a function number (0 for sine, 1 for cosine, and 2 for tangent) and an argument to the server, which calculates the result and sends it back to the client. The communication between the client and server is done through a Unix domain socket. The server listens for incoming connections and handles them by reading the function number and argument, calculating the result, and sending it back to the client. The program includes signal handlers and an exit handler to ensure proper cleanup of the socket.
