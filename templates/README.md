@@ -4,6 +4,8 @@ Functions provided and developed within the course to learn and experiment on.
 
 ## Features
 
+- `message-queue-posix`: Client-Server Messages using POSIX Queues
+- `message-queue-system-v`: Client-Server Messages using System V Queues
 - `file-create-write-read`: File Creation, Reading, Writing
 - `non-block-input`: Non-Blocking Input in Raw Mode
 - `pipe-handling`: Pipe Handling Functionalities
