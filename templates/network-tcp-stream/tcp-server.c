@@ -13,7 +13,7 @@
 #include <signal.h>
 #include <assert.h>
 #include <errno.h>
-#include "bsp.h"
+#include "config.h"
 
 /* Paralleler Server                            */
 /* Beschränkung auf maximal MAXCONN Connections */
