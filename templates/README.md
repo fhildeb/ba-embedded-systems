@@ -5,6 +5,7 @@ Functions provided and developed within the course to learn and experiment on.
 ## Features
 
 - `file-create-write-read`: File Creation, Reading, Writing
+- `non-block-input`: Non-Blocking Input in Raw Mode
 - `pipe-handling`: Pipe Handling Functionalities
   - Forking, Duplication and Execution
   - Opening and Closing
