@@ -1,5 +1,5 @@
-#if !defined(__SOCKBSP_H)
-#define __SOCKBSP_H
+#if !defined(__SOCKET_H)
+#define __SOCKET_H
 #define ORDER_SOCKET "/tmp/OrderDgram"
 #define CLIENT_SOCKET "/tmp/Client_"
 

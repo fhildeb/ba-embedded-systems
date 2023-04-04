@@ -4,6 +4,7 @@ Functions provided and developed within the course to learn and experiment on.
 
 ## Features
 
+- `datagram-exchange`: Client-Server Datagram Communication
 - `datagram-simple`: Connectionless Client-Server Communication
 - `file-create-write-read`: File Creation, Reading, Writing
 - `memory-mapping`: Inter-Process Communication with Memory Mapping

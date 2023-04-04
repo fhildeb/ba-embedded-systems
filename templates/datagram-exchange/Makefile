@@ -6,10 +6,10 @@ server: server.o
 client: client.o
 	gcc -g -o client client.o 
 
-server.o: server.c sockbsp.h
+server.o: server.c socket.h
 	gcc -Wall -g -c server.c
 
-client.o: client.c sockbsp.h
+client.o: client.c socket.h
 	gcc -Wall -g -c client.c
 
 clean:

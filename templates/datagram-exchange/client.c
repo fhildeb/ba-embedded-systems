@@ -7,7 +7,7 @@
 #include <sys/socket.h>
 #include <sys/un.h>
 #include <stddef.h>
-#include "sockbsp.h"
+#include "socket.h"
 #include <signal.h>
 #include <math.h>
 #define SOCKNAME_LEN 20
