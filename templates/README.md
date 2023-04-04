@@ -1,6 +1,6 @@
 # Templates
 
-Functions provided and developed within the course to learn and experiment on.
+Projects provided and developed within the course for learning and experimentation purposes. These were properly structured, documented, polished, and set up with builds to maximize convinience and learning curves.
 
 ## Features
 
