@@ -1,4 +1,3 @@
-/*** tcp_sniff.c ***/
 #include <stdio.h>
 #include <string.h>
 #include <arpa/inet.h>
@@ -25,4 +24,3 @@ int main(int argc, char *argv[])
 
 	return 0;
 }
-/*** Ende von tcp_sniff.c ***/

@@ -1,4 +1,3 @@
-/*** icmp_log.c ***/
 /* Beispiel nach http://www.zotteljedi.de/doc/raw-socket-tipps.html */
 
 #include <stdio.h>
@@ -69,4 +68,3 @@ int main(int argc, char *argv[])
 
 	return EXIT_SUCCESS;
 }
-/*** Ende von icmp_log.c ***/

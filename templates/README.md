@@ -4,10 +4,11 @@ Functions provided and developed within the course to learn and experiment on.
 
 ## Features
 
-- `network-echo`: Client-Server Network Text Communication
 - `memory-mapping`: Inter-Process Communication with Memory Mapping
 - `message-queue-posix`: Client-Server Messages using POSIX Queues
 - `message-queue-system-v`: Client-Server Messages using System V Queues
+- `network-capture`: Sniffing TCP, UDP, and ICMP Data Packages
+- `network-echo`: Client-Server Network Text Communication
 - `file-create-write-read`: File Creation, Reading, Writing
 - `non-block-input`: Non-Blocking Input in Raw Mode
 - `pipe-handling`: Pipe Handling Functionalities
