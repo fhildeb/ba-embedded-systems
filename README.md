@@ -16,13 +16,13 @@ The Repository is split in two main parts:
 
 `templates`
 
-- Collection of **26 sample projects** provided within the course to learn and experiment.
-- Structured, documented, polished, and set up with builds to maximize convinience and learning curves.
+- Collection of **26 sample projects** provided within the course to learn and experiment
+- Structured, documented, polished, and set up with builds for easy integration
 
 `main projects`
 
-- Numbered set of **13 own projects** planned and developed from scratch throughout the course
-- Projects have increasing difficulty on changing topics.
+- Numbered set of **13 own projects** planned and developed from scratch
+- Projects have increasing difficulty on changing topics
 
 #### Main Projects
 
@@ -44,17 +44,17 @@ The Repository is split in two main parts:
 
 > Look into [templates](./templates/) to get a full description
 
-- Datagrams: Connectionless and Settled Communication
-- File Handling: Write, Read, and Copy
-- Memory Management: Mapping and Sharing
-- Message Queues: POSIX and System V
-- Network Transfers: Sniffing, TCP and UDP Transfers
-- Pipe Handling: Forking, Duplication, Opening, and Closing
-- Semaphore Restrictions: Single or Multi-Accesss, Synchronization
-- Signals and Operating Systems: Delaying, Masking, Jumping, and Blocking
-- Socket Management: Pairs and Streams
-- Terminal I/O: Nonblocks
-- Threads: Mutex, Data Keys, Syncronization
+- `Datagrams`: Connectionless and Settled Communication
+- `File Handling`: Write, Read, and Copy
+- `Memory Management`: Mapping and Sharing
+- `Message Queues`: POSIX and System V
+- `Network Transfers`: Sniffing, TCP and UDP Transfers
+- `Pipe Handling`: Forking, Duplication, Opening, and Closing
+- `Semaphore Restrictions`: Single or Multi-Accesss, Synchronization
+- `Signals and Operating Systems`: Delaying, Masking, and Jumping
+- `Socket Management`: Pairs and Streams
+- `Terminal I/O`: Nonblocks
+- `Threads`: Mutex, Data Keys, Syncronization
 
 ## Run in Terminal
 
