@@ -1,6 +1,3 @@
-CC = gcc
-CFLAGS = -Wall -Wextra -pedantic
-
 .PHONY: all clean
 
 all: network-client network-server

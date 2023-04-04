@@ -29,7 +29,7 @@ int main(int argc, char* argv[])
 
     /* Argumentzahl abtesten */
     if(argc != 2) {
-        fprintf(stderr, "Nutzung: inetclient <server>\n");
+        fprintf(stderr, "Nutzung: network-client <server>\n");
         return EXIT_FAILURE;
     }
 
