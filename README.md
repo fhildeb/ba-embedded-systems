@@ -14,7 +14,7 @@ Regarding the Unix file systems: processes, kernel, signals, and device drivers 
 
 The Repository is split in two main parts:
 
-`templates`:
+`templates`
 
 - Collection of **26 sample projects** provided within the course to learn and experiment.
 - Structured, documented, polished, and set up with builds to maximize convinience and learning curves.
