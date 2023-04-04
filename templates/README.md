@@ -4,6 +4,8 @@ Functions provided and developed within the course to learn and experiment on.
 
 ## Features
 
+- `datagram-simple`: Connectionless Client-Server Communication
+- `file-create-write-read`: File Creation, Reading, Writing
 - `memory-mapping`: Inter-Process Communication with Memory Mapping
 - `message-queue-posix`: Client-Server Messages using POSIX Queues
 - `message-queue-system-v`: Client-Server Messages using System V Queues
@@ -11,7 +13,6 @@ Functions provided and developed within the course to learn and experiment on.
 - `network-echo`: Client-Server Network Text Communication
 - `network-tcp-stream`: TCP Client-Server Network Communication
 - `network-datagram`: UDP Client-Server Network Communication
-- `file-create-write-read`: File Creation, Reading, Writing
 - `non-block-input`: Non-Blocking Input in Raw Mode
 - `pipe-handling`: Pipe Handling Functionalities
   - Forking, Duplication and Execution
