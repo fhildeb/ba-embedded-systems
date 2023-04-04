@@ -7,3 +7,5 @@ tcp-client.o: tcp-client.c
 	gcc -Wall -g -c tcp-client.c
 tcp-server.o: tcp-server.c
 	gcc -Wall -g -c tcp-server.c
+clean:
+	rm -f *.o tcp-client tcp-server *~

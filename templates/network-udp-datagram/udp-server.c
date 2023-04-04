@@ -12,7 +12,7 @@
 #include <unistd.h>
 #include <assert.h>
 #include <errno.h>
-#include "bsp.h"
+#include "config.h"
 
 /* Protokoll: 
    Client sendet "instruct"

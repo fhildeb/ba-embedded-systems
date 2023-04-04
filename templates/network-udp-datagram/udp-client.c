@@ -14,7 +14,7 @@
 #include <unistd.h>
 #include <assert.h>
 #include <errno.h>
-#include "bsp.h"
+#include "config.h"
 
 extern int errno;
 
@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
 
     /* Argumentzahl abtesten */
     if(argc != 2) {
-		fprintf(stderr, "Nutzung: inetclient <server>\n");
+		fprintf(stderr, "Nutzung: tcp-client <server>\n");
 		return EXIT_FAILURE;
     }
 
