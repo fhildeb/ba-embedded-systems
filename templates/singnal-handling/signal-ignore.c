@@ -1,29 +1,29 @@
 #include <signal.h>
-#include <stdio.h> 
+#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 
 int main(void)
 {
-    struct sigaction act, oldact;
-        
-    /* Handler festlegen -> ignoriere Signal */
-    act.sa_handler = SIG_IGN;
-    /* kein anderes Signal maskieren */
-    sigemptyset(&act.sa_mask);
-    act.sa_flags=0;
+  struct sigaction act, oldact;
 
-    sigaction(SIGINT, &act, &oldact);
-    puts("SIGINT disabled");
+  /* Handler festlegen -> ignoriere Signal */
+  act.sa_handler = SIG_IGN;
+  /* kein anderes Signal maskieren */
+  sigemptyset(&act.sa_mask);
+  act.sa_flags = 0;
 
-    /* hier wird jedes ^C ignoriert */
-    sleep(5);
+  sigaction(SIGINT, &act, &oldact);
+  puts("SIGINT disabled");
 
-    /* alten Zustand wiederherstellen */
-    sigaction(SIGINT, &oldact, &act);
-    puts("SIGINT enabled");
+  /* hier wird jedes ^C ignoriert */
+  sleep(5);
 
-    pause();    /* pause() wartet auf Signal */
+  /* alten Zustand wiederherstellen */
+  sigaction(SIGINT, &oldact, &act);
+  puts("SIGINT enabled");
 
-    return 0;        
+  pause(); /* pause() wartet auf Signal */
+
+  return 0;
 }

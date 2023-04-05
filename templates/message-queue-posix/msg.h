@@ -4,20 +4,26 @@
 #define ORDER_MQ "/Order"
 #define RESULT_MQ "/Result_"
 
-enum {sinus, cosinus, tangens};
+enum
+{
+  sinus,
+  cosinus,
+  tangens
+};
 
 char *s[] = {"Sinus", "Cosinus", "Tangens"};
 
-struct order {
-	char res_queue[20];
-	int functno;
-	double argument;
+struct order
+{
+  char res_queue[20];
+  int functno;
+  double argument;
 };
 
-struct result {
-	int functno;
-	double argument;
-	double result;
+struct result
+{
+  int functno;
+  double argument;
+  double result;
 };
 #endif
-

@@ -25,57 +25,52 @@
 #define NOBOLD 3
 #define OFF 0
 
-
-void ANSIattrib(int fg,int bg,int bold)
+void ANSIattrib(int fg, int bg, int bold)
 {
-	printf("\033[%d;%d;%dm",fg,bg,bold);
-	fflush(stdout);
+  printf("\033[%d;%d;%dm", fg, bg, bold);
+  fflush(stdout);
 }
 
 void ANSIattribOff()
 {
-	printf("\033[0m");
-	fflush(stdout);
+  printf("\033[0m");
+  fflush(stdout);
 }
-
 
 void exitproc(void)
 {
-	fprintf(stderr, "...räume auf!\n");
-	ANSIattribOff();
+  fprintf(stderr, "...räume auf!\n");
+  ANSIattribOff();
 }
 
+void sighandler(int signo) { exit(EXIT_FAILURE); }
 
-void sighandler(int signo)
+int main(int argc, char *argv[])
 {
-	exit(EXIT_FAILURE);
+  struct sigaction newsa, oldsa;
+  int i;
+
+  atexit(exitproc);
+  newsa.sa_handler = sighandler;
+  newsa.sa_flags = 0;
+  sigemptyset(&newsa.sa_mask);
+
+  for (i = 1; i < 16; i++)
+  {
+    if (i != 9)
+    {
+      if (sigaction(i, &newsa, &oldsa) < 0)
+      {
+        fprintf(stderr, "Signal: %d", i);
+        perror("sigaction");
+      }
+    }
+  }
+
+  /*Umschalten Ausgabefarben mit ANSI-Steuerfolgen */
+  ANSIattrib(FGYELLOW, BGBLUE, BOLD);
+  printf("Farben neu gesetzt!\n");
+  sleep(5);
+
+  return EXIT_SUCCESS;
 }
-
-int main (int argc, char *argv[])
-{
-	struct sigaction newsa, oldsa;
-	int i;
-
-	atexit(exitproc);
-	newsa.sa_handler=sighandler;
-	newsa.sa_flags=0;
-	sigemptyset(&newsa.sa_mask);
-
-	for(i=1; i<16; i++) {
-		if(i!=9) {
-			if(sigaction(i, &newsa, &oldsa)<0) {
-		   		fprintf(stderr,"Signal: %d", i);
-		   		perror("sigaction");
-			}
-		}
-	}
-
-
-	/*Umschalten Ausgabefarben mit ANSI-Steuerfolgen */
-	ANSIattrib(FGYELLOW, BGBLUE, BOLD);
-	printf("Farben neu gesetzt!\n");
-	sleep(5);
-	
-	return EXIT_SUCCESS;
-}
-

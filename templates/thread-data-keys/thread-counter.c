@@ -1,15 +1,15 @@
-#include <pthread.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
 #include <assert.h>
+#include <pthread.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 pthread_key_t key;
 
 void counterinit()
 {
   int *cnt = (int *)malloc(sizeof(int));
-  *cnt=0;
+  *cnt = 0;
   pthread_setspecific(key, (void *)cnt);
 }
 
@@ -21,23 +21,20 @@ int counter()
   return cnt;
 }
 
-
 void *thread_fkt(void *p)
 {
   char *s = (char *)p;
   int i;
   counterinit();
-  for(i=0; i<10; i++) {
+  for (i = 0; i < 10; i++)
+  {
     printf("%s: Zähler: %d\n", s, counter());
     sleep(1);
   }
   return NULL;
 }
 
-void free_mem(void *cnt)
-{
-  free(cnt);
-}
+void free_mem(void *cnt) { free(cnt); }
 
 int main(void)
 {

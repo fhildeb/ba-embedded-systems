@@ -1,13 +1,13 @@
-#include <string.h>
+#include "simple-semaphore.h"
+#include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
-#include <sys/types.h>
+#include <string.h>
 #include <sys/ipc.h>
 #include <sys/sem.h>
 #include <sys/shm.h>
-#include <signal.h>
-#include "simple-semaphore.h"
+#include <sys/types.h>
+#include <unistd.h>
 #define SHMSZ 256
 
 int shmid, semid;
@@ -16,105 +16,116 @@ int shmid, semid;
 void exithandler()
 {
 
-   if(shmctl(shmid, IPC_RMID, NULL) < 0) {
-     perror("shmctl");
-     _exit(EXIT_FAILURE);
-   }
+  if (shmctl(shmid, IPC_RMID, NULL) < 0)
+  {
+    perror("shmctl");
+    _exit(EXIT_FAILURE);
+  }
 
-   if(semctl(semid, 2, IPC_RMID, NULL) < 0) {
-     perror("semctl");
-     _exit(EXIT_FAILURE);
-   }
-   return;
+  if (semctl(semid, 2, IPC_RMID, NULL) < 0)
+  {
+    perror("semctl");
+    _exit(EXIT_FAILURE);
+  }
+  return;
 }
-
 
 /* bei SIGINT wird SHM-Segment gelöscht */
 void sighandler(int signo)
 {
-   exithandler();
-   _exit(EXIT_FAILURE);
+  exithandler();
+  _exit(EXIT_FAILURE);
 }
 
-int main (int argc, char **argv)
+int main(int argc, char **argv)
 /* Demo für Nutzung des Shared Memory */
 /* Achtung, keine Synchronisation !!  */
 /* Das ist ein Fehler !!!             */
 {
-    key_t key;
-    char *shm;
-    struct sigaction old, new;
-    int count=0;
+  key_t key;
+  char *shm;
+  struct sigaction old, new;
+  int count = 0;
 
-    if(argc > 2) {
-        fprintf(stderr, "Aufruf: %s  für ersten Leser, %s 1 für jeden weiteren!\n", argv[0], argv[0]);
-	return EXIT_FAILURE;
+  if (argc > 2)
+  {
+    fprintf(stderr, "Aufruf: %s  für ersten Leser, %s 1 für jeden weiteren!\n",
+            argv[0], argv[0]);
+    return EXIT_FAILURE;
+  }
+
+  /* Signalbehandlung vorbereiten */
+  sigemptyset(&(new.sa_mask));
+  new.sa_handler = sighandler;
+  new.sa_flags = 0;
+
+  if ((key = ftok(argv[0], 1)) < 0)
+  {
+    perror("ftok");
+    exit(EXIT_FAILURE);
+  }
+
+  /* Shared memory anfordern, Besitzer und Gruppe dürfen lesen und
+     Schreiben */
+  if ((shmid = shmget(key, SHMSZ, 0660 | IPC_CREAT)) < 0)
+  {
+    perror("shmget");
+    return EXIT_FAILURE;
+  }
+
+  if (argc == 1)
+  {
+    semid = initSema(key, 10);
+    /* Signalhandler scharf schalten */
+    if (sigaction(SIGINT, &new, &old) < 0)
+    {
+      perror("sigaction");
+      exit(EXIT_FAILURE);
     }
+    /* Exit-Handler installieren, damit SHM und Semaphoren in jedem Falle
+     * freigegeben werden */
+    atexit(exithandler);
+  }
+  else
+  {
+    /* keine Signalbehandlung */
+    semid = initSema(key, 10);
+  }
 
-    /* Signalbehandlung vorbereiten */
-    sigemptyset(&(new.sa_mask));
-    new.sa_handler = sighandler;
-    new.sa_flags = 0;
+  /* Shared Memory in Adressraum einblenden */
+  if ((shm = shmat(shmid, NULL, 0)) == (char *)(-1))
+  {
+    perror("shmat");
+    return EXIT_FAILURE;
+  }
 
+  /* erste Instanz: maximal SHMSZ Bytes in SHM kopieren */
+  if (argc == 1)
+    strncpy(shm, "Hello World!", SHMSZ);
 
-    if((key = ftok(argv[0], 1)) < 0) {
-        perror("ftok");
-        exit(EXIT_FAILURE);
+  /* Zeichenkette in SHM ausgeben */
+  while (shm[0] != '0')
+  {
+    if (P(semid, 1) < 0)
+    {
+      perror("semaphor p()");
+      exit(EXIT_FAILURE);
     }
-
-    /* Shared memory anfordern, Besitzer und Gruppe dürfen lesen und
-       Schreiben */
-    if ((shmid = shmget(key, SHMSZ, 0660|IPC_CREAT)) < 0) {
-	perror("shmget");
-	return EXIT_FAILURE;
+    printf("%04d: %s\n", count++, shm);
+    sleep(1);
+    if (V(semid, 1) < 0)
+    {
+      perror("semaphor p()");
+      exit(EXIT_FAILURE);
     }
+  }
 
-    if(argc == 1) {
-        semid = initSema(key, 10);
-        /* Signalhandler scharf schalten */
-        if(sigaction(SIGINT, &new, &old) < 0) {
-            perror("sigaction");
-            exit(EXIT_FAILURE);
-        }
-        /* Exit-Handler installieren, damit SHM und Semaphoren in jedem Falle freigegeben werden */
-        atexit(exithandler);
+  if (shmdt(shm) < 0)
+  {
+    perror("shmdt");
+    return EXIT_FAILURE;
+  }
 
-    } else {
-        /* keine Signalbehandlung */
-        semid = initSema(key, 10);
-    }
-    
-
-    /* Shared Memory in Adressraum einblenden */
-    if ((shm = shmat(shmid, NULL, 0)) == (char *)(-1)) {
-	perror("shmat");
-	return EXIT_FAILURE;
-    }
-
-    /* erste Instanz: maximal SHMSZ Bytes in SHM kopieren */
-    if(argc == 1) strncpy(shm, "Hello World!", SHMSZ);
-
-    /* Zeichenkette in SHM ausgeben */
-    while(shm[0] != '0') {
-        if(P(semid, 1)<0) {
-            perror("semaphor p()");
-            exit(EXIT_FAILURE);
-        }
-    	printf("%04d: %s\n", count++, shm);
-	sleep(1);
-        if(V(semid, 1)<0) {
-            perror("semaphor p()");
-            exit(EXIT_FAILURE);
-        }
-
-    }
-
-    if(shmdt(shm)<0) {
-    	perror("shmdt");
-	return EXIT_FAILURE;
-    }
-
-    /* SHM und SEM Löschen in Exit-Funktion! */
-    return EXIT_SUCCESS;
+  /* SHM und SEM Löschen in Exit-Funktion! */
+  return EXIT_SUCCESS;
 }
-

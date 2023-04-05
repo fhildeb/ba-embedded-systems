@@ -4,40 +4,41 @@
 /* - enthalten Prototypen von Bibliotheksfunktionen */
 /*   wie printf(), scanf()                          */
 
+#include "area.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "area.h"
 
 /* Definition der Funktion main()                   */
 int main(int argc, char *argv[])
 {
-    /* Definition lokaler Variablen                 */
-    double r, u, flaeche;
-    char jn;
+  /* Definition lokaler Variablen                 */
+  double r, u, flaeche;
+  char jn;
 
-    int erg;
-     
-    /* Versuche zählen */
-    static int versuch = 0;
-    
-    /* Anweisungsteil */
-    do {
-        printf("Geben Sie den Radius ein : ");
-        erg=scanf("%lg",&r);     // erg sollte ueberprueft werden!
-        
-			/*Versuche erhöhen */        
-        ++versuch;
-        
-        /* Konstante ersetzt durch Pi() */
-        u = 2*Pi()*r;
-        flaeche = kreisFlaeche(r);
+  int erg;
 
-        /* Versuche ausgeben */ 
-        printf("Umfang: %lg  Flaeche: %lg Versuch: %d \n", u, flaeche, versuch);
+  /* Versuche zählen */
+  static int versuch = 0;
 
-        printf(" Nochmal (j/n)?");
-        erg = scanf(" %c", &jn);
+  /* Anweisungsteil */
+  do
+  {
+    printf("Geben Sie den Radius ein : ");
+    erg = scanf("%lg", &r); // erg sollte ueberprueft werden!
 
-    } while(jn == 'j');
-    return EXIT_SUCCESS;     /* EXIT_SUCCESS (0) alles ok */
-}                           
+    /*Versuche erhöhen */
+    ++versuch;
+
+    /* Konstante ersetzt durch Pi() */
+    u = 2 * Pi() * r;
+    flaeche = kreisFlaeche(r);
+
+    /* Versuche ausgeben */
+    printf("Umfang: %lg  Flaeche: %lg Versuch: %d \n", u, flaeche, versuch);
+
+    printf(" Nochmal (j/n)?");
+    erg = scanf(" %c", &jn);
+
+  } while (jn == 'j');
+  return EXIT_SUCCESS; /* EXIT_SUCCESS (0) alles ok */
+}
