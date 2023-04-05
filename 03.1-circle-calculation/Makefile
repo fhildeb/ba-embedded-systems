@@ -10,11 +10,11 @@
 
 #Binary erstellen:
 #: make
-kreis:	kreis.o
-	gcc $(DEBUG) -Wall -o kreis kreis.o
+circle-calculation:	circle-calculation.o
+	gcc $(DEBUG) -Wall -o circle-calculation circle-calculation.o
 	
-kreis.o:	kreis.c
-	gcc $(DEBUG) -Wall -c kreis.c
+circle-calculation.o:	circle-calculation.c
+	gcc $(DEBUG) -Wall -c circle-calculation.c
 
 clean:
 	rm -f *.o
