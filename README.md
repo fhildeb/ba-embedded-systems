@@ -27,7 +27,7 @@ The Repository is split in two main parts:
 #### Main Projects
 
 1. Input and Output
-2.
+2. Data Types and Structures
 3.
 4.
 5.

@@ -10,37 +10,37 @@
 
 #Binary erstellen:
 #: make
-prak2: 01-input-data-types 02-input-data-forms 03-data-type-size 04-structs 05-union
+prak2: display-conversions formatted-conversions data-type-sizes struct-memory union-memory
 
-01-input-data-types:	01-input-data-types.o
-	gcc $(DEBUG) -Wall -o 01-input-data-types 01-input-data-types.o -std=c11
+display-conversions:	display-conversions.o
+	gcc $(DEBUG) -Wall -o display-conversions display-conversions.o -std=c11
 
-01-input-data-types.o:	01-input-data-types.c
+display-conversions.o:	display-conversions.c
 	gcc $(DEBUG) -Wall -c prak2_1.c -std=c11
 	
-02-input-data-forms:	02-input-data-forms.o
-	gcc $(DEBUG) -Wall -o 02-input-data-forms 02-input-data-forms.o -std=c11
+formatted-conversions:	formatted-conversions.o
+	gcc $(DEBUG) -Wall -o formatted-conversions formatted-conversions.o -std=c11
 
-02-input-data-forms.o:	02-input-data-forms.c
-	gcc $(DEBUG) -Wall -c 02-input-data-forms.c -std=c11
+formatted-conversions.o:	formatted-conversions.c
+	gcc $(DEBUG) -Wall -c formatted-conversions.c -std=c11
 	
-03-data-type-size:	03-data-type-size.o
-	gcc $(DEBUG) -Wall -o 03-data-type-size 03-data-type-size.o -std=c11
+data-type-sizes:	data-type-sizes.o
+	gcc $(DEBUG) -Wall -o data-type-sizes data-type-sizes.o -std=c11
 	
-03-data-type-size.o:	03-data-type-size.c
-	gcc $(DEBUG) -Wall -c 03-data-type-size.c -std=c11
+data-type-sizes.o:	data-type-sizes.c
+	gcc $(DEBUG) -Wall -c data-type-sizes.c -std=c11
 	
-04-structs:	04-structs.o
-	gcc $(DEBUG) -Wall -o 04-structs 04-structs.o -std=c11	
+struct-memory:	struct-memory.o
+	gcc $(DEBUG) -Wall -o struct-memory struct-memory.o -std=c11	
 	
-04-structs.o:	04-structs.c
-	gcc $(DEBUG) -Wall -c 04-structs.c -std=c11
+struct-memory.o:	struct-memory.c
+	gcc $(DEBUG) -Wall -c struct-memory.c -std=c11
 
-05-union:	05-union.o
-	gcc $(DEBUG) -Wall -o 05-union 05-union.o -std=c11	
+union-memory:	union-memory.o
+	gcc $(DEBUG) -Wall -o union-memory union-memory.o -std=c11	
 	
-05-union.o:	05-union.c
-	gcc $(DEBUG) -Wall -c 05-union.c -std=c11
+union-memory.o:	union-memory.c
+	gcc $(DEBUG) -Wall -c union-memory.c -std=c11
 	
 clean:
 	rm -f *.o
