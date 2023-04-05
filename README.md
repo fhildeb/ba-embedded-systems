@@ -70,5 +70,5 @@ The Repository is split in two main parts:
 make
 
 #2 Run the built executable
-bash ./executable
+./executable [params]
 ```
