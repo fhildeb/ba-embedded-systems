@@ -122,7 +122,7 @@ int main(int argc, char* argv[])
    if(argc != 3)
    {
        printf("Programm muss in folgendem Schema aufgerufen werden: \n");
-       printf("./getFullPathName <Dateiname> <Umgebungsvariable>\n");
+       printf("./get-pathname <Dateiname> <Umgebungsvariable>\n");
        return EXIT_FAILURE;
    }
 

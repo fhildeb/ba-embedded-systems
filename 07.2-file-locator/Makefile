@@ -10,11 +10,11 @@
 
 #Binary erstellen:
 #: make
-getFullPathName:	getFullPathName.o
-	gcc $(DEBUG) -Wall -o getFullPathName getFullPathName.o
+get-pathname:	get-pathname.o
+	gcc $(DEBUG) -Wall -o get-pathname get-pathname.o
 	
-getFullPathName.o:	getFullPathName.c
-	gcc $(DEBUG) -Wall -c getFullPathName.c
+get-pathname.o:	get-pathname.c
+	gcc $(DEBUG) -Wall -c get-pathname.c
 
 clean:
 	rm -f *.o

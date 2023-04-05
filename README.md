@@ -35,7 +35,9 @@ The Repository is split in two main parts:
    - File Scanner
    - Directory Check
    - Softlink Detector
-7.
+7. OS File Operations
+   - Memory Mapped Cloning
+   - Environment Path Locator
 8.
 9.
 10.
