@@ -10,11 +10,11 @@
 
 #Binary erstellen:
 #: make
-copy:	copy.o
-	gcc $(DEBUG) -Wall -o copy copy.o
+clone:	clone.o
+	gcc $(DEBUG) -Wall -o clone clone.o
 	
-copy.o:	copy.c
-	gcc $(DEBUG) -Wall -c copy.c
+clone.o:	clone.c
+	gcc $(DEBUG) -Wall -c clone.c
 
 clean:
 	rm -f *.o
