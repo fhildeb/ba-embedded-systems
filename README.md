@@ -31,7 +31,7 @@ The Repository is split in two main parts:
 3. Circle Calculation
 4. Bubble Sort Random Inputs
 5. File Copy
-6.
+6. File Property Reader
 7.
 8.
 9.

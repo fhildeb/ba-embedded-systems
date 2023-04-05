@@ -17,7 +17,7 @@
 	der als <param1> übergebenen Datei
 */
 
-/*Prototyp der showStat-Funktion*/
+/*Prototyp der show-stat-Funktion*/
 void showStats(char* input_name);
 int wandleDateitypInString(mode_t mode);
 const char * datenTypen[] = {"regular file","directory","character device","block device", "FIFO","symbolic link","socket"};
@@ -175,9 +175,4 @@ int main(int argc, char * argv[])
 		}
 		return EXIT_SUCCESS;
 	}
-	
-	
-		
-
-	
 }

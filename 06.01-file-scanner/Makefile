@@ -10,11 +10,11 @@
 
 #Binary erstellen:
 #: make
-showStat:	showStat.o
-	gcc $(DEBUG) -o showStat showStat.o -std=c11
+show-stat:	show-stat.o
+	gcc $(DEBUG) -o show-stat show-stat.o -std=c11
 	
-showStat.o:	showStat.c
-	gcc $(DEBUG) -c showStat.c -std=c11
+show-stat.o:	show-stat.c
+	gcc $(DEBUG) -c show-stat.c -std=c11
 
 clean:
 	rm -f *.o
