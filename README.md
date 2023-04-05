@@ -30,7 +30,7 @@ The Repository is split in two main parts:
 2. Data Types and Structures
 3. Circle Calculation
 4. Bubble Sort Random Inputs
-5.
+5. File Copy
 6.
 7.
 8.
