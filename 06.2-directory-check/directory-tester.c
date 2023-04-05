@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "IsDir.h"
+#include "directory-tester.h"
 
 /* Praktikum 6: Aufgabe 2
 	Programm welches die Funktion IsDir testet
@@ -9,7 +9,7 @@ int main(int argc, char* argv[]) {
 	
 	if (argc != 2) {
 		fprintf(stderr,"Das Programm ist mit folgendem Schema aufzurufen:,\n"
-		"./IsDirTester <Dateiname>\n");
+		"./directory-tester <Dateiname>\n");
 		exit(EXIT_FAILURE);
 	}
 	
