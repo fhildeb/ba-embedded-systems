@@ -31,7 +31,10 @@ The Repository is split in two main parts:
 3. Circle Calculation
 4. Bubble Sort Random Inputs
 5. File Copy
-6. File & Directory Reader
+6. Property Reading
+   - File Scanner
+   - Directory Check
+   - Softlink Detector
 7.
 8.
 9.

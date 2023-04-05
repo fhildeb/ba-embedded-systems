@@ -1,7 +1,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "IsSoftLink.h"
+#include "softlink.h"
 
 /* Praktikum 6: Aufgabe 3
 	Programm wwelches die Funktion IsSoftLink testet
@@ -10,8 +10,8 @@ int main(int argc, char* argv[]) {
 	//Prüfung, ob eine zu überprüfende Datei mitgegeben wurde
 	if (argc != 2 && argc != 3) {
 		fprintf(stderr,"Programm muss mit folgenden Schemen aufgerufen werden: \n,"
-		"1) ./IsSoftLinkTester <Dateiname>,"
-		"2) ./IsSoftLinkTester <Dateiname> <Linkerdatei>");
+		"1) ./softlink-tester <Dateiname>,"
+		"2) ./softlink-tester <Dateiname> <Linkerdatei>");
 		exit(EXIT_FAILURE);
 	}
 	//Dateiverlinkung auslesen
