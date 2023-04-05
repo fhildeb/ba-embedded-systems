@@ -2,7 +2,7 @@
 #include <string.h>
 #include <malloc.h>
 #include <stdlib.h>
-#include "nFeld.h"
+#include "array.h"
 
 /* Praktikum 4: Aufgabe 2
 	Programm welches Speicher reserviert, mit
