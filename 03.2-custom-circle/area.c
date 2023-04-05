@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include "flaeche.h"
+#include "area.h"
 
 /* Praktikum 3: Aufgabe 2-6
 	Definition der Funktionen welche für
