@@ -8,7 +8,6 @@
 	Definition der Funktionen welche zum
 	sortieren und zur Ausgabe von Zeichen im
 	reservierten Speicher dienen
-	@author: fhildeb1
 */
 	/*Anzeige des übergebenen Feldes in der Kommandozentrale*/
 	void zeigeFeld(int* inputFeld, int inputGroesse )

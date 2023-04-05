@@ -15,7 +15,6 @@
 /* Praktikum 6 Aufgabe 1:
 	Programm zum anzeigen der Dateieigenschaften
 	der als <param1> übergebenen Datei
-	@author: fhildeb1
 */
 
 /*Prototyp der showStat-Funktion*/

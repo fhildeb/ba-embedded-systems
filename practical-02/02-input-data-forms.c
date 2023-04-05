@@ -4,7 +4,6 @@
 /*
 	Praktikum 2: Aufgabe 2
 	Eingegebenes Zeichen in verschiedenen Datenformen ausgeben
-	@author: fhildeb1
 */
 int main()
 {

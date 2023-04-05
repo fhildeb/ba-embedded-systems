@@ -18,7 +18,6 @@
 /* Praktikum 5:
 	Programm zum kopieren von Datei <param1> nach <param2>
 	mit identischem Inhalt und Rechten
-	@author: fhildeb1
 */
 
 int main(int argc, char* argv[])

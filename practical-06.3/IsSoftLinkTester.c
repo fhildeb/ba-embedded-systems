@@ -5,7 +5,6 @@
 
 /* Praktikum 6: Aufgabe 3
 	Programm wwelches die Funktion IsSoftLink testet
-	@author: fhildeb1
 */
 int main(int argc, char* argv[]) {
 	//Prüfung, ob eine zu überprüfende Datei mitgegeben wurde

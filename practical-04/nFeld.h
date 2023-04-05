@@ -2,7 +2,6 @@
 	Definition des Prototyps der
 	Funktion zum sortieren und 
 	Ausgabe der Inhalte im Speichers
-	@author: fhildeb1
 */
 
 //Ausgabe vor Sortierung

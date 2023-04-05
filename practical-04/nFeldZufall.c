@@ -7,7 +7,6 @@
 /* Praktikum 4: Aufgabe 2
 	Programm welches Speicher reserviert, mit
 	Zufallszahlen belegt und diese ausgeben kann
-	@author: fhildeb1
 */
 int main(int argc, char** argv)
 {

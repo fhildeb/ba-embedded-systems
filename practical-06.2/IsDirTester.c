@@ -4,7 +4,6 @@
 
 /* Praktikum 6: Aufgabe 2
 	Programm welches die Funktion IsDir testet
-	@author: fhildeb1
 */
 int main(int argc, char* argv[]) {
 	

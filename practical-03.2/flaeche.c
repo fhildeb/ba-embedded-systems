@@ -6,7 +6,6 @@
 /* Praktikum 3: Aufgabe 2-6
 	Definition der Funktionen welche für
 	kreis.c benötigt werden
-	@author: fhildeb1
 */
 
 /* Definition der Funktion kreisFlaeche() 

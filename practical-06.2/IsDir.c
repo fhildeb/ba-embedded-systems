@@ -5,7 +5,6 @@
 /* Praktikum 4: Aufgabe 2
 	Funktion welches auslesen kann, ob die
 	angegebene Datei ein Ordner ist
-	@author: fhildeb1
 */
 int isDir(char* dateiname) {
 	struct stat information;

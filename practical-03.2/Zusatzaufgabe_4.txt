@@ -1,4 +1,3 @@
-@author: fhildeb1
 Zusatzfrage: Muss der Prototyp der Funktion Pi() 
 in flaeche.h aufgenommen werden?
 

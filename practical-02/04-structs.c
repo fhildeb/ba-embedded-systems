@@ -4,7 +4,6 @@
 /*
 	Praktikum 2: Aufgabe 4
 	Erlaeutern des Aufbaus einer Strucktur
-	@author: fhildeb1
 */
 //Strucktur definieren
 struct test

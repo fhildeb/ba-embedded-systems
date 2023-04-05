@@ -4,7 +4,6 @@
 /*
 	Praktikum 2: Aufgabe 4b
 	Strucktur in Union anlegen
-	@author: fhildeb1
 */
 //Strucktur innerhalb des Union definieren
 union testunion{

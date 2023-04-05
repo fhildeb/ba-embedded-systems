@@ -1,4 +1,3 @@
-@author: fhildeb1
 Zusatzaufgabe: Erstellen Die Pi() so, dass diese
 Funtkion außerhalb von flaeche.c nicht sichtbar und
 nutzbar ist.

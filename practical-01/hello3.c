@@ -5,7 +5,6 @@
 /*
 	Praktikum 1: Aufgabe 3
 	Ausgabe der Char-Anzahl eines Strings
-	@author: fhildeb1
 */
 int main()
 {

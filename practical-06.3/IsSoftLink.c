@@ -8,7 +8,6 @@
 
 /* Praktikum 6: Aufgabe 3
 	Funktion welche prüft ob Dateiname ein Link ist
-	@author: fhildeb1
 */
 char* isSoftLink(char* dateiname) {
 	static char dateiNameVerweis[PATH_MAX];

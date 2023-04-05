@@ -17,8 +17,7 @@ int main(int argc, char *argv[])
 
     int erg;
      
-    /*edit @author: fhildeb1
-    Versuche zählen */
+    /* Versuche zählen */
     static int versuch = 0;
     
     /* Anweisungsteil */
@@ -26,17 +25,14 @@ int main(int argc, char *argv[])
         printf("Geben Sie den Radius ein : ");
         erg=scanf("%lg",&r);     // erg sollte ueberprueft werden!
         
-			/*edit @author: fhildeb1
-    		Versuche erhöhen */        
+			/*Versuche erhöhen */        
         ++versuch;
         
-        /*edit: @author: fhildeb1
-        Konstante ersetzt durch Pi()*/
+        /* Konstante ersetzt durch Pi() */
         u = 2*Pi()*r;
         flaeche = kreisFlaeche(r);
 
-        /*edit @author: fhildeb1
-    		Versuche ausgeben */ 
+        /* Versuche ausgeben */ 
         printf("Umfang: %lg  Flaeche: %lg Versuch: %d \n", u, flaeche, versuch);
 
         printf(" Nochmal (j/n)?");

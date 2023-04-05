@@ -4,7 +4,6 @@
 /*
 	Praktikum 2: Aufgabe 3
 	Größe der Datentypen ausgeben
-	@author: fhildeb1
 */
 int main()
 {

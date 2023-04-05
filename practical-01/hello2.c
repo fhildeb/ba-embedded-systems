@@ -5,7 +5,6 @@
 /*
 	Praktikum 1: Aufgabe 2
 	Ausgabe einer Zeichenkette mit Header und Beendingung
-	@author: fhildeb1
 */
 int main()
 {
