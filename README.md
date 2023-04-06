@@ -45,7 +45,7 @@ The Repository is split in two main parts:
 9. Signal Process Synchronization
 10. Message Queue File Transfer
 11. Unix Socket File Transfer
-12.
+12. Multi-Thread File Transfer
 13.
 
 #### Templates
