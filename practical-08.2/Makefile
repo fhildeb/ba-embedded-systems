@@ -10,11 +10,11 @@
 
 #Binary erstellen:
 #: make
-withoutParent: withoutParent.o
-	gcc $(DEBUG) -Wall -o withoutParent withoutParent.o
+fork-termination: fork-termination.o
+	gcc $(DEBUG) -Wall -o fork-termination fork-termination.o
 	
-withoutParent.o:	withoutParent.c
-	gcc $(DEBUG) -Wall -c withoutParent.c
+fork-termination.o:	fork-termination.c
+	gcc $(DEBUG) -Wall -c fork-termination.c
 
 clean:
 	rm -f *.o
