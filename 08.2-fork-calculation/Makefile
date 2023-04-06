@@ -10,11 +10,11 @@
 
 #Binary erstellen:
 #: make
-zaelen: zaelen.o
-	gcc $(DEBUG) -Wall -o zaelen zaelen.o
+fork-calculation: fork-calculation.o
+	gcc $(DEBUG) -Wall -o fork-calculation fork-calculation.o
 	
-zaelen.o:	zaelen.c
-	gcc $(DEBUG) -Wall -c zaelen.c
+fork-calculation.o:	fork-calculation.c
+	gcc $(DEBUG) -Wall -c fork-calculation.c
 
 clean:
 	rm -f *.o
