@@ -38,7 +38,10 @@ The Repository is split in two main parts:
 7. OS File Operations
    - Memory Mapped Cloning
    - Environment Path Locator
-8.
+8. Forking Mechanisms
+   - Child Process Calculation
+   - Process ID Syncronisation
+   - External Process Forwarding
 9.
 10.
 11.
