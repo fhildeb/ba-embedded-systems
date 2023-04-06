@@ -42,8 +42,8 @@ The Repository is split in two main parts:
    - Child Process Calculation
    - Process ID Syncronisation
    - External Process Forwarding
-9.
-10.
+9. Signal Process Synchronization
+10. Message Queue File Copy
 11.
 12.
 13.
