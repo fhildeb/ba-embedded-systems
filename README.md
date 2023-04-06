@@ -43,8 +43,8 @@ The Repository is split in two main parts:
    - Process ID Syncronisation
    - External Process Forwarding
 9. Signal Process Synchronization
-10. Message Queue File Copy
-11.
+10. Message Queue File Transfer
+11. Unix Socket File Transfer
 12.
 13.
 
